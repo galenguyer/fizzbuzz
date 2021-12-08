@@ -2,14 +2,14 @@ section .text
 global _start
 
 _start:
-    mov rax, 4 ; sys_write
-    mov rbx, 1 ; stdout
-    mov rcx, msg
-    mov rdx, msg_len
+    mov eax, 4 ; sys_write
+    mov ebx, 1 ; stdout
+    mov ecx, msg
+    mov edx, msg_len
     int 0x80
 
-    mov rax, 1 ; exit
-    mov rbx, 0
+    mov eax, 1 ; exit
+    mov ebx, 0 ; exit code
     int 0x80
 
 section .data
