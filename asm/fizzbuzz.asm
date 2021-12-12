@@ -8,7 +8,7 @@ _start:
     mov edx, msg_len
     int 0x80
 
-    mov eax, 1 ; exit
+    mov eax, 1 ; sys_exit
     mov ebx, 0 ; exit code
     int 0x80
 
