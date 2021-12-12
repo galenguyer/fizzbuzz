@@ -4,15 +4,16 @@ import "fmt"
 
 func main() {
 	for i := 1; i <= 100; i++ {
+		result := ""
 		if i%3 == 0 {
-			fmt.Print("Fizz")
+			result += "Fizz"
 		}
 		if i%5 == 0 {
-			fmt.Print("Buzz")
+			result += "Buzz"
 		}
 		if i%3 != 0 && i%5 != 0 {
-			fmt.Printf("%d", i)
+			result += fmt.Sprintf("%d", i)
 		}
-		fmt.Print("\n")
+		fmt.Println(result)
 	}
 }
