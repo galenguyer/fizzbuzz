@@ -11,7 +11,7 @@ func main() {
 		if i%5 == 0 {
 			result += "Buzz"
 		}
-		if i%3 != 0 && i%5 != 0 {
+		if result == "" {
 			result += fmt.Sprintf("%d", i)
 		}
 		fmt.Println(result)
